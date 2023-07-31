@@ -1,8 +1,6 @@
-﻿namespace S6DZ;
-
-class Program
+internal class Program
 {
-    static void Main(string[] args)
+    private static void Main(string[] args)
     {
         void FillArray(int[] array, int minValue = -9, int maxValue = 9)
         {
@@ -12,7 +10,7 @@ class Program
             {
                 array[i] = rnd.Next(minValue, maxValue);
             }
-        }      
+        }
         void FillArrayDouble(double[] array, int minValue = -9, int maxValue = 9)
         {
             maxValue++;
@@ -22,7 +20,7 @@ class Program
                 array[i] = rnd.NextDouble() * (maxValue - minValue) + minValue;
                 array[i] = Math.Round(array[i], 2);
             }
-        }      
+        }
         void PrintArray(int[] array)
         {
             for (int i = 0; i < array.Length; i++)
@@ -61,28 +59,24 @@ class Program
         {
             Console.Write(text);
             return Convert.ToInt32(Console.ReadLine());
-        } 
-
-    }
-
-    void Task41()
-    {
-        //Задача 41: Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.
-
-        int countOfNumbers = Input ("Сколько чисел хотите ввести? ");
-        int count = 0;
-        for (int i = 1; i <= countOfNumbers; i++)
-        {
-            int number = Input ($"Введите {i} число: ");
-            if (number > 0) count++;
-
         }
-        Console.WriteLine($"Вы ввели {count} чисел больше нуля");
+
+
+
+        void Task41()
+        {
+            //Задача 41: Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.
+
+            int countOfNumbers = Input("Сколько чисел хотите ввести? ");
+            int count = 0;
+            for (int i = 1; i <= countOfNumbers; i++)
+            {
+                int number = Input($"Введите {i} число: ");
+                if (number > 0) count++;
+
+            }
+            Console.WriteLine($"Вы ввели {count} чисел больше нуля");
+        }
+        Task41();
     }
-    Task41();
-    
-
-
-
-    
 }
